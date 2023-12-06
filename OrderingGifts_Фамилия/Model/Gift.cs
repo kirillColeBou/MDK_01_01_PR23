@@ -13,7 +13,7 @@ namespace OrderingGifts_Тепляков.Model
         public string category_gift;
         public string text;
         public string address;
-        public string date;
+        public DateTime date;
         public string email;
     }
 }

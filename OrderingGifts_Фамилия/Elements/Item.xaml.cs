@@ -1,4 +1,5 @@
 ﻿using OrderingGifts_Тепляков.Classes;
+using OrderingGifts_Тепляков.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,15 @@ namespace OrderingGifts_Тепляков.Elements
     public partial class Item : UserControl
     {
         GiftContext Gift;
-        public Item()
+        public Item(GiftContext Gift)
         {
             InitializeComponent();
+            IFio.Content = Gift.FIO;
+            ICategory.Content = $"Категория: " + Gift.category_gift;
+            IDate.Content = $"Дата: " + Gift.date.ToString("dd.MM.yyyy");
+            IEmail.Content = $"Почта: " + Gift.email;
+            IText.Text = Gift.text;
+            this.Gift = Gift;
         }
 
         private void EditGift(object sender, RoutedEventArgs e)

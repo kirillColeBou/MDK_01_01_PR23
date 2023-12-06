@@ -22,7 +22,7 @@ namespace OrderingGifts_Тепляков.Classes
                 newGift.category_gift = dataGifts.GetString(2);
                 newGift.text = dataGifts.GetString(3);
                 newGift.address = dataGifts.GetString(4);
-                newGift.date = dataGifts.GetString(5);
+                newGift.date = dataGifts.GetDateTime(5);
                 newGift.email = dataGifts.GetString(6);
                 allGifts.Add(newGift);
             }
@@ -41,7 +41,7 @@ namespace OrderingGifts_Тепляков.Classes
                                           $"[Категория подарка] = '{this.category_gift}', " +
                                           $"[Текст сообщения] = '{this.text}', " +
                                           $"[Адрес доставки] = '{this.address}', " +
-                                          $"[Дата и время отправки письма] = '{this.date}', " +
+                                          $"[Дата и время отправки письма] = '{this.date.ToString("dd.MM.yyyy")}', " +
                                           $"[Почта для связи] = '{this.email}', " +
                                           $"WHERE [Код] = {this.id}", connection);
                 Common.DBConnection.CloseConnection(connection);
@@ -62,7 +62,7 @@ namespace OrderingGifts_Тепляков.Classes
                                                 $"'{this.category_gift}', " +
                                                 $"'{this.text}', " +
                                                 $"'{this.address}', " +
-                                                $"'{this.date}', " +
+                                                $"'{this.date.ToString("dd.MM.yyyy")}', " +
                                                 $"'{this.email}')", connection);
                 Common.DBConnection.CloseConnection(connection);
             }
