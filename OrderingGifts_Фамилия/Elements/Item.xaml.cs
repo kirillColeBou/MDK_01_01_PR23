@@ -29,6 +29,7 @@ namespace OrderingGifts_Тепляков.Elements
             InitializeComponent();
             IFio.Content = Gift.FIO;
             ICategory.Content = $"Категория: " + Gift.category_gift;
+            IAddress.Content = $"Адрес: " + Gift.address;
             IDate.Content = $"Дата: " + Gift.date.ToString("dd.MM.yyyy");
             IEmail.Content = $"Почта: " + Gift.email;
             IText.Text = Gift.text;

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace OrderingGifts_Фамилия.Pages
 {
@@ -21,9 +22,21 @@ namespace OrderingGifts_Фамилия.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public static Main main;
         public Main()
         {
             InitializeComponent();
+            CreateUI();
+            main = this;
+        }
+
+        public void CreateUI()
+        {
+            parrent.Children.Clear();
+            foreach (OrderingGifts_Тепляков.Classes.GiftContext gift in MainWindow.init.AllGifts)
+            {
+                parrent.Children.Add(new OrderingGifts_Тепляков.Elements.Item(gift));
+            }
         }
 
         private void AddNewGift(object sender, RoutedEventArgs e)

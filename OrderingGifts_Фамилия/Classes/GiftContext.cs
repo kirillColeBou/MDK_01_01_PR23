@@ -4,6 +4,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace OrderingGifts_Тепляков.Classes
 {
@@ -42,7 +43,7 @@ namespace OrderingGifts_Тепляков.Classes
                                           $"[Текст сообщения] = '{this.text}', " +
                                           $"[Адрес доставки] = '{this.address}', " +
                                           $"[Дата и время отправки письма] = '{this.date.ToString("dd.MM.yyyy")}', " +
-                                          $"[Почта для связи] = '{this.email}', " +
+                                          $"[Почта для связи] = '{this.email}' " +
                                           $"WHERE [Код] = {this.id}", connection);
                 Common.DBConnection.CloseConnection(connection);
             }

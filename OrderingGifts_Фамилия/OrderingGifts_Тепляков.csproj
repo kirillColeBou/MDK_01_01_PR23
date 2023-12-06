@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagesItem\AddCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PagesItem\Range.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +104,9 @@
     </Compile>
     <Compile Include="Pages\PagesItem\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesItem\AddCategory.xaml.cs">
+      <DependentUpon>AddCategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PagesItem\Range.xaml.cs">
       <DependentUpon>Range.xaml</DependentUpon>

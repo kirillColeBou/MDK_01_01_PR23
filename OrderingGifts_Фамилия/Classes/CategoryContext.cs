@@ -32,7 +32,7 @@ namespace OrderingGifts_Тепляков.Classes
                 OleDbConnection connection = Common.DBConnection.Connection();
                 Common.DBConnection.Query("INSERT INTO " +
                                             "[Категории]" +
-                                                "([Категория])" +
+                                                "([Категория подарка])" +
                                             "VALUES (" +
                                                 $"'{this.category}')", connection);
                 Common.DBConnection.CloseConnection(connection);
@@ -40,7 +40,7 @@ namespace OrderingGifts_Тепляков.Classes
             else
             {
                 OleDbConnection connection = Common.DBConnection.Connection();
-                Common.DBConnection.Query($"UPDATE [Категории] SET [Категория] = '{this.category}' WHERE [Код] = {this.id}", connection);
+                Common.DBConnection.Query($"UPDATE [Категории] SET [Категория подарка] = '{this.category}' WHERE [Код] = {this.id}", connection);
                 Common.DBConnection.CloseConnection(connection);
             }
         }

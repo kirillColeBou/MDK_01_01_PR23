@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrderingGifts_Фамилия.Pages.PagesItem"
       mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="Add">
 
     <Grid Background="#FF4C4C4C">
@@ -13,11 +13,23 @@
             <Image Source="/OrderingGifts_Тепляков;component/Images/icon.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="60" Width="60"/>
             <Label Content="Добавление подарка" Foreground="White" FontFamily="Corbel" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,11,0,0"/>
         </Grid>
-        <Grid VerticalAlignment="Top" Margin="0,80,0,0" MinHeight="420">
-            
+        <Grid Margin="0,80,0,0" MinHeight="420" Height="420" VerticalAlignment="Top">
+            <Label Content="Укажите ФИО:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0" FontSize="16"/>
+            <TextBox x:Name="tb_fio" VerticalAlignment="Top" Margin="10,40,10,10" Height="30"/>
+            <Label Content="Укажите категорию подарка:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" FontSize="16"/>
+            <ComboBox x:Name="tb_category" VerticalAlignment="Top" Margin="10,110,140,10" Height="30"/>
+            <Button Click="AddCategory" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Height="30" Margin="0,110,10,10"/>
+            <Label Content="Напишите текст к заказу:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,145,0,0" FontSize="16"/>
+            <TextBox x:Name="tb_text" VerticalAlignment="Top" Margin="10,180,10,10" Height="30"/>
+            <Label Content="Укажите адрес:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,215,0,0" FontSize="16"/>
+            <TextBox x:Name="tb_date" VerticalAlignment="Top" Margin="10,250,10,10" Height="30"/>
+            <Label Content="Укажите дату:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,285,0,0" FontSize="16"/>
+            <TextBox x:Name="tb_address" VerticalAlignment="Top" Margin="10,320,10,10" Height="30"/>
+            <Label Content="Укажите почту:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,355,0,0" FontSize="16"/>
+            <TextBox x:Name="tb_email" VerticalAlignment="Top" Margin="10,390,10,0" Height="30"/>
         </Grid>
         <Grid VerticalAlignment="Bottom" MinHeight="50">
-            <Button Click="AddNewGift_db" Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button x:Name="btnAdd"  Click="AddNewGift_db" Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <Button Click="BackPage" Content="Назад" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
         </Grid>
     </Grid>

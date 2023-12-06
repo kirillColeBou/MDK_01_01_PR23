@@ -4,10 +4,10 @@ namespace OrderingGifts_Тепляков.Classes.Common
 {
     public class DBConnection
     {
-        public static readonly string Path = @"C:\Users\kiril\OneDrive\Рабочий стол\ПР23\OrderingGifts_Тепляков\OrderingGifts_Фамилия\bin\Debug\ПР22.accdb";
+        public static readonly string Path = @"C:\Users\kiril\OneDrive\Рабочий стол\ПР23\OrderingGifts_Тепляков\OrderingGifts_Фамилия\bin\Debug\ПР23.accdb";
         public static OleDbConnection Connection()
         {
-            OleDbConnection oleDbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + Path);
+            OleDbConnection oleDbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.15.0; Data Source=" + Path);
             oleDbConnection.Open();
             return oleDbConnection;
         }
