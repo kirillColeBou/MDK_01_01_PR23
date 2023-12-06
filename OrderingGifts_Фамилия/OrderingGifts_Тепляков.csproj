@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Elements\Item.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +70,9 @@
     <Compile Include="Classes\CategoryContext.cs" />
     <Compile Include="Classes\Common\DBConnection.cs" />
     <Compile Include="Classes\GiftContext.cs" />
+    <Compile Include="Elements\Item.xaml.cs">
+      <DependentUpon>Item.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\ICategory.cs" />
     <Compile Include="Interfaces\IGift.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -122,9 +129,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Elements\" />
-    <Folder Include="Images\" />
+    <Resource Include="Images\icon-black.png" />
+    <Resource Include="Images\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

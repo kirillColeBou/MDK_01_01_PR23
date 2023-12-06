@@ -10,7 +10,7 @@
 
     <Grid Background="#FF4C4C4C">
         <Grid VerticalAlignment="Top" MinHeight="80" Background="#FF6B4DDB">
-            <Image/>
+            <Image Source="/OrderingGifts_Тепляков;component/Images/icon.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="60" Width="60"/>
             <Label Content="Сортировка подарков" Foreground="White" FontFamily="Corbel" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,11,0,0"/>
         </Grid>
         <Grid VerticalAlignment="Top" Margin="0,80,0,0" MinHeight="420">
