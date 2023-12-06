@@ -8,5 +8,8 @@ namespace OrderingGifts_Тепляков.Interfaces
 {
     public interface ICategory
     {
+        void Save(bool Update = false);
+        List<Classes.GiftContext> AllCategories();
+        void Delete();
     }
 }
