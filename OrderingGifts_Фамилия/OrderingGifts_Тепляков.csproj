@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DD2A7D70-1250-4D4E-B1D8-3ADF32021D92}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OrderingGifts_Фамилия</RootNamespace>
-    <AssemblyName>OrderingGifts_Фамилия</AssemblyName>
+    <RootNamespace>OrderingGifts_Тепляков</RootNamespace>
+    <AssemblyName>OrderingGifts_Тепляков</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -63,6 +63,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\CategoryContext.cs" />
+    <Compile Include="Classes\Common\DBConnection.cs" />
+    <Compile Include="Classes\GiftContext.cs" />
+    <Compile Include="Interfaces\ICategory.cs" />
+    <Compile Include="Interfaces\IGift.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -81,6 +86,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Gift.cs" />
     <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
