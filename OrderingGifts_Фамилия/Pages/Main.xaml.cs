@@ -12,30 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OrderingGifts_Фамилия.Pages;
 
-namespace OrderingGifts_Тепляков
+namespace OrderingGifts_Фамилия.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            OpenPages(pages.main);
-        }
-
-        public enum pages
-        {
-            main
-        }
-
-        public void OpenPages(pages _pages)
-        {
-            if (_pages == pages.main)
-                frame.Navigate(new Main());
         }
     }
 }
