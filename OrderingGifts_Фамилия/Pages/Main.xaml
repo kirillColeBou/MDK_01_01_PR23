@@ -13,14 +13,14 @@
             <Image/>
             <Label Content="Заказ подарков" Foreground="White" FontFamily="Corbel" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,11,0,0"/>
         </Grid>
-        <Grid VerticalAlignment="Top" Margin="0,80,0,0" MinHeight="420">
+        <Grid Margin="0,80,0,50">
             <ScrollViewer Margin="10,10,10,10">
                 <StackPanel x:Name="parrent"/>
             </ScrollViewer>
         </Grid>
         <Grid VerticalAlignment="Bottom" MinHeight="50">
-            <Button Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button Content="Сортировать" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
+            <Button Click="AddNewGift" Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button Click="RangeGift" Content="Сортировать" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
         </Grid>
     </Grid>
 </Page>

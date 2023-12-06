@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using OrderingGifts_Фамилия.Pages;
+using OrderingGifts_Фамилия.Pages.PagesItem;
 
 namespace OrderingGifts_Тепляков
 {
@@ -21,21 +22,27 @@ namespace OrderingGifts_Тепляков
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
         public MainWindow()
         {
             InitializeComponent();
+            init = this;
             OpenPages(pages.main);
         }
 
         public enum pages
         {
-            main
+            main, add, range
         }
 
         public void OpenPages(pages _pages)
         {
             if (_pages == pages.main)
                 frame.Navigate(new Main());
+            if (_pages == pages.add)
+                frame.Navigate(new Add());
+            if (_pages == pages.range)
+                frame.Navigate(new Range());
         }
     }
 }

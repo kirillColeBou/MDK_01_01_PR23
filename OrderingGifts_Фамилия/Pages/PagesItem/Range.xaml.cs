@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderingGifts_Тепляков;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace OrderingGifts_Фамилия.Pages.PagesItem
         public Range()
         {
             InitializeComponent();
+        }
+
+        private void NewRange(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Сортировка выполнена");
+            MainWindow.init.OpenPages(MainWindow.pages.main);
+        }
+
+        private void BackPage(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPages(MainWindow.pages.main);
         }
     }
 }

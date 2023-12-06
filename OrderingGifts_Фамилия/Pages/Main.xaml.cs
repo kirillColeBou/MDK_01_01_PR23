@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderingGifts_Тепляков;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace OrderingGifts_Фамилия.Pages
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void AddNewGift(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPages(MainWindow.pages.add);
+        }
+
+        private void RangeGift(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPages(MainWindow.pages.range);
         }
     }
 }

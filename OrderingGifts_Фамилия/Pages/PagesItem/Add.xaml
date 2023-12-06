@@ -17,8 +17,8 @@
             
         </Grid>
         <Grid VerticalAlignment="Bottom" MinHeight="50">
-            <Button Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button Content="Назад" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
+            <Button Click="AddNewGift_db" Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Button Click="BackPage" Content="Назад" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
         </Grid>
     </Grid>
 </Page>
