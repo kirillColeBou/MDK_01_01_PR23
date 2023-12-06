@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using OrderingGifts_Тепляков.Classes;
 using OrderingGifts_Фамилия.Pages;
 using OrderingGifts_Фамилия.Pages.PagesItem;
 
@@ -22,6 +23,8 @@ namespace OrderingGifts_Тепляков
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<GiftContext> AllGifts = new GiftContext().AllGifts();
+        public List<CategoryContext> AllCategories = new CategoryContext().AllCategories();
         public static MainWindow init;
         public MainWindow()
         {
