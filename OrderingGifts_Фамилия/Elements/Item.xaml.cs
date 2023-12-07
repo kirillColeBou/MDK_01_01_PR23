@@ -24,6 +24,7 @@ namespace OrderingGifts_Тепляков.Elements
     public partial class Item : UserControl
     {
         GiftContext Gift;
+        RangeContext Range;
         public Item(GiftContext Gift)
         {
             InitializeComponent();
@@ -34,6 +35,18 @@ namespace OrderingGifts_Тепляков.Elements
             IEmail.Content = $"Почта: " + Gift.email;
             IText.Text = Gift.text;
             this.Gift = Gift;
+        }
+
+        public Item(RangeContext Range)
+        {
+            InitializeComponent();
+            IFio.Content = Range.FIO;
+            ICategory.Content = $"Категория: " + Range.category_gift;
+            IAddress.Content = $"Адрес: " + Range.address;
+            IDate.Content = $"Дата: " + Range.date.ToString("dd.MM.yyyy");
+            IEmail.Content = $"Почта: " + Range.email;
+            IText.Text = Range.text;
+            this.Range = Range;
         }
 
         private void EditGift(object sender, RoutedEventArgs e)

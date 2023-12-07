@@ -20,7 +20,7 @@
         </Grid>
         <Grid VerticalAlignment="Bottom" MinHeight="50">
             <Button Click="AddNewGift" Content="Добавить" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Button Click="RangeGift" Content="Сортировать" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0"/>
+            <Button Click="RangeGift" Content="Сортировать" Width="120" Height="25" HorizontalAlignment="Left" Margin="140,0,0,0" x:Name="BtnRange"/>
         </Grid>
     </Grid>
 </Page>

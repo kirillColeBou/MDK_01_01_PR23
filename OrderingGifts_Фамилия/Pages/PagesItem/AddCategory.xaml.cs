@@ -84,11 +84,11 @@ namespace OrderingGifts_Тепляков.Pages.PagesItem
             {
                 OleDbConnection connection = Classes.Common.DBConnection.Connection();
                 Classes.Common.DBConnection.Query($"DELETE FROM [Категории] WHERE [Категория подарка] = '{tb_new_category.Text}'", connection);
-                MessageBox.Show("Ответственный удален");
+                MessageBox.Show("Категория удалена");
                 MainWindow.init.AllCategories = new CategoryContext().AllCategories();
                 CreateCategory();
             }
-            else MessageBox.Show("Выбирите ответственного для удаления");
+            else MessageBox.Show("Выбирите категорию для удаления");
         }
 
         private void BackPage(object sender, RoutedEventArgs e)

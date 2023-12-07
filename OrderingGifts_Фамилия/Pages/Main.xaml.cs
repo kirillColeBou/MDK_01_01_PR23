@@ -2,6 +2,7 @@
 using OrderingGifts_Фамилия.Pages.PagesItem;
 using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,12 @@ namespace OrderingGifts_Фамилия.Pages
     public partial class Main : Page
     {
         public static Main main;
+
         public Main()
         {
             InitializeComponent();
-            CreateUI();
+            if (!Range.RangeApply) CreateUI();
+            else CreateUI_Range();
             main = this;
         }
 
@@ -40,6 +43,16 @@ namespace OrderingGifts_Фамилия.Pages
             }
         }
 
+        public void CreateUI_Range()
+        {
+            BtnRange.Content = "Удалить";
+            parrent.Children.Clear();
+            foreach (OrderingGifts_Тепляков.Classes.RangeContext range in MainWindow.init.AllRanges)
+            {
+                parrent.Children.Add(new OrderingGifts_Тепляков.Elements.Item(range));
+            }
+        }
+
         private void AddNewGift(object sender, RoutedEventArgs e)
         {
             MainWindow.init.OpenPages(MainWindow.pages.add);
@@ -47,7 +60,15 @@ namespace OrderingGifts_Фамилия.Pages
 
         private void RangeGift(object sender, RoutedEventArgs e)
         {
-            MainWindow.init.OpenPages(MainWindow.pages.range);
+            if(BtnRange.Content.ToString() == "Удалить")
+            {
+                OleDbConnection connection = OrderingGifts_Тепляков.Classes.Common.DBConnection.Connection();
+                OrderingGifts_Тепляков.Classes.Common.DBConnection.Query("DELETE FROM [Сортировка]", connection);
+                BtnRange.Content = "Сортировать";
+                Range.RangeApply = false;
+                CreateUI();
+            }
+            else MainWindow.init.OpenPages(MainWindow.pages.range);
         }
     }
 }

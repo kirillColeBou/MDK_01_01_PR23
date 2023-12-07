@@ -15,9 +15,9 @@
         </Grid>
         <Grid VerticalAlignment="Top" Margin="0,80,0,0" MinHeight="470">
             <Label Content="Выберите дату начала" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,0,0" FontSize="24"/>
-            <TextBox x:Name="tb_date_start" VerticalAlignment="Top" Margin="10,70,10,10" Height="30"/>
+            <DatePicker x:Name="tb_date_start" VerticalAlignment="Top" Margin="10,70,10,10" Height="30"/>
             <Label Content="Выберите дату конца" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontSize="24"/>
-            <TextBox x:Name="tb_date_end" VerticalAlignment="Top" Margin="10,160,10,10" Height="30"/>
+            <DatePicker x:Name="tb_date_end" VerticalAlignment="Top" Margin="10,160,10,10" Height="30"/>
         </Grid>
         <Grid VerticalAlignment="Bottom" MinHeight="50">
             <Button Click="NewRange" Content="Сортировать" Width="120" Height="25" HorizontalAlignment="Left" Margin="10,0,0,0"/>
