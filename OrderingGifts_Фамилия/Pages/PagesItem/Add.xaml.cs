@@ -123,7 +123,7 @@ namespace OrderingGifts_Фамилия.Pages.PagesItem
 
         private void AddCategory(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.init.OpenPages(MainWindow.pages.addCategory);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace OrderingGifts_Тепляков
 
         public enum pages
         {
-            main, add, range
+            main, add, range, addCategory
         }
 
         public void OpenPages(pages _pages)
@@ -46,6 +46,8 @@ namespace OrderingGifts_Тепляков
                 frame.Navigate(new Add());
             if (_pages == pages.range)
                 frame.Navigate(new Range());
+            if (_pages == pages.addCategory)
+                frame.Navigate(new Pages.PagesItem.AddCategory());
         }
     }
 }
