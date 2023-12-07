@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace OrderingGifts_Тепляков.Interfaces
 {
-    public interface ICategory
+    public interface IRange
     {
-        void Save(bool Update = false);
-        List<Classes.CategoryContext> AllCategories();
+        List<Classes.RangeContext> AllRanges();
     }
 }

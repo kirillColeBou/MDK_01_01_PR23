@@ -25,6 +25,7 @@ namespace OrderingGifts_Тепляков
     {
         public List<GiftContext> AllGifts = new GiftContext().AllGifts();
         public List<CategoryContext> AllCategories = new CategoryContext().AllCategories();
+        public List<RangeContext> AllRanges = new RangeContext().AllRanges();
         public static MainWindow init;
         public MainWindow()
         {

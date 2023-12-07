@@ -44,13 +44,5 @@ namespace OrderingGifts_Тепляков.Classes
                 Common.DBConnection.CloseConnection(connection);
             }
         }
-
-        public void Delete()
-        {
-            OleDbConnection connection = Common.DBConnection.Connection();
-            Common.DBConnection.Query($"DELETE FROM [Категории] WHERE [Код] = {this.id}", connection);
-            Common.DBConnection.CloseConnection(connection);
-
-        }
     }
 }

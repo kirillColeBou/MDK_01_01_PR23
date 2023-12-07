@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OrderingGifts_Тепляков.Elements"
              mc:Ignorable="d">
-    <Grid Background="Wheat" Height="180" Width="450">
+    <Grid Background="Wheat" Height="180" Width="450" Margin="10,10,10,10">
         <Label x:Name="IFio"      Content="ФИО"       Foreground="Black" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="15,10,0,0"  FontSize="10" Height="25" FontWeight="Bold"/>
         <Label x:Name="ICategory" Content="Категория" Foreground="Black" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="15,45,0,0"  FontSize="10"/>
         <Label x:Name="IAddress"  Content="Адрес"     Foreground="Black" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="15,80,0,0"  FontSize="10"/>

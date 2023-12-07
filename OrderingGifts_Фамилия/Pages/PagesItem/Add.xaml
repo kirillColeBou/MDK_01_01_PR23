@@ -22,9 +22,9 @@
             <Label Content="Напишите текст к заказу:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,145,0,0" FontSize="16"/>
             <TextBox x:Name="tb_text" VerticalAlignment="Top" Margin="10,180,10,10" Height="30"/>
             <Label Content="Укажите адрес:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,215,0,0" FontSize="16"/>
-            <TextBox x:Name="tb_date" VerticalAlignment="Top" Margin="10,250,10,10" Height="30"/>
+            <TextBox x:Name="tb_address" VerticalAlignment="Top" Margin="10,250,10,10" Height="30"/>
             <Label Content="Укажите дату:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,285,0,0" FontSize="16"/>
-            <TextBox x:Name="tb_address" VerticalAlignment="Top" Margin="10,320,10,10" Height="30"/>
+            <TextBox x:Name="tb_date" VerticalAlignment="Top" Margin="10,320,10,10" Height="30"/>
             <Label Content="Укажите почту:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,355,0,0" FontSize="16"/>
             <TextBox x:Name="tb_email" VerticalAlignment="Top" Margin="10,390,10,0" Height="30"/>
         </Grid>
